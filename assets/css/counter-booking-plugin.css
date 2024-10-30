@@ -1,0 +1,409 @@
+.counter-booking-modal {
+  background: #fff;
+  position: fixed;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  left: -100%;
+  top: 0px;
+  bottom: 0px;
+  max-width: none !important;
+  width: 100% !important;
+  z-index: 2000;
+  margin: 0px !important;
+}
+
+.counter-booking-modal header {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  background: #fff;
+  height: 40px;
+  display: flex;
+  padding: 0 20px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.counter-booking-modal header span {
+  cursor: pointer;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #888;
+}
+
+.counter-booking-modal main {
+  position: absolute;
+  left: 0px;
+  top: 40px;
+  right: 0px;
+  bottom: 0px;
+}
+
+.counter-booking-form {
+  border: 0px none;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+}
+
+.starting-form {
+  display: flex;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  justify-content: space-between;
+  background: #fff;
+  box-sizing: border-box;
+  padding: 19px;
+  box-shadow: 0 0 7px #ccc;
+  border-radius: 45px;
+  font-weight: normal;
+}
+
+.starting-form > div {
+  border-left: 1px solid #eee;
+  padding-left: 15px;
+  box-sizing: border-box;
+}
+
+.starting-form > div:first-child {
+  border-left: 0 none;
+}
+
+.starting-form > div.button-holder {
+  border-left: 0 none;
+}
+
+.starting-form label {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 20px;
+  margin-bottom: 5px;
+  color: #777;
+}
+
+.starting-form input, .starting-form button {
+  width: 100%;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+.starting-form select, .starting-form input {
+  background: transparent !important;
+  font-weight: normal !important;
+  padding: 0 !important;
+  border: 0 none !important;
+  font-size: 16px !important;
+  height: 36px !important;
+  color: #888 !important;
+}
+
+.starting-form select::-webkit-input-placeholder, .starting-form input::-webkit-input-placeholder {
+  color: #ccc;
+}
+
+.starting-form select::-moz-placeholder, .starting-form input::-moz-placeholder {
+  color: #ccc;
+}
+
+.starting-form select:-ms-input-placeholder, .starting-form input:-ms-input-placeholder {
+  color: #ccc;
+}
+
+.starting-form select:-moz-placeholder, .starting-form input:-moz-placeholder {
+  color: #ccc;
+}
+
+.starting-form select {
+  width: 200px;
+}
+
+.starting-form button {
+  padding: 0 !important;
+  width: 56px !important;
+  height: 56px !important;
+  line-height: 56px !important;
+  text-align: center !important;
+  border-radius: 50% !important;
+  border: 0 none !important;
+  background: #E4A987 !important;
+  box-shadow: none !important;
+}
+
+.starting-form button svg {
+  display: inline-block;
+  vertical-align: middle;
+  width: 24px;
+  height: 24px;
+}
+
+.starting-form button svg path {
+  fill: #fff;
+}
+
+.starting-form button span {
+  display: none;
+}
+
+.starting-form .location-holder {
+  position: relative;
+}
+
+.starting-form .location-holder .location-selector {
+  position: absolute;
+  display: none;
+  left: 0;
+  top: 100%;
+  font-size: 14px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 0 5px #aaa;
+  font-weight: 700;
+  color: #333;
+  padding: 10px;
+  width: 240px;
+  z-index: 10;
+}
+
+.starting-form .location-holder .location-selector.active {
+  display: block;
+}
+
+.starting-form .location-holder .location-selector .location-selector-row {
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 10px;
+  position: relative;
+}
+
+.starting-form .location-holder .location-selector .location-selector-row:hover {
+  background: #eee;
+}
+
+.starting-form .location-holder .location-selector .location-selector-row img {
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  border-radius: 50%;
+}
+
+.starting-form .location-holder .location-selector .location-selector-row .lbl {
+  display: block;
+  line-height: 48px;
+  padding-left: 58px;
+}
+
+.starting-form .guests-holder {
+  position: relative;
+}
+
+.starting-form .guests-holder .guests-selector {
+  position: absolute;
+  display: none;
+  left: 0;
+  top: 100%;
+  font-size: 14px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 0 5px #aaa;
+  font-weight: 700;
+  color: #333;
+  padding: 15px;
+  width: 240px;
+  z-index: 10;
+}
+
+.starting-form .guests-holder .guests-selector.active {
+  display: block;
+}
+
+.starting-form .guests-holder .guests-selector .guests-selector-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.starting-form .guests-holder .guests-selector .guests-selector-row .label {
+  color: #333;
+  font-size: 14px;
+}
+
+.starting-form .guests-holder .guests-selector .guests-switcher {
+  display: flex;
+  align-items: center;
+}
+
+.starting-form .guests-holder .guests-selector .guests-switcher .btn {
+  border: 2px solid #eee;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  display: inline-block;
+  text-align: center;
+  line-height: 22px;
+  cursor: pointer;
+  border-radius: 50%;
+  box-sizing: border-box;
+  box-shadow: none !important;
+  font-size: 22px;
+  position: relative;
+}
+
+.starting-form .guests-holder .guests-selector .guests-switcher .btn:before, .starting-form .guests-holder .guests-selector .guests-switcher .btn:after {
+  content: '';
+  width: 10px;
+  height: 2px;
+  left: 50%;
+  top: 50%;
+  margin-left: -5px;
+  margin-top: -1px;
+  position: absolute;
+  background: #777;
+}
+
+.starting-form .guests-holder .guests-selector .guests-switcher .btn:after {
+  transform: rotate(90deg);
+}
+
+.starting-form .guests-holder .guests-selector .guests-switcher .btn.minus:after {
+  content: none;
+}
+
+.starting-form .guests-holder .guests-selector .guests-switcher .value {
+  display: inline-block;
+  font-size: 14px;
+  width: 40px;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.datepicker-dropdown {
+  background: #fff;
+  width: 300px;
+  padding: 15px;
+  border-radius: 30px;
+  box-shadow: 0 0 15px #aaa;
+}
+
+.datepicker-dropdown .datepicker-picker {
+  box-shadow: none;
+}
+
+.datepicker-dropdown .datepicker-picker, .datepicker-dropdown .days, .datepicker-dropdown .datepicker-grid {
+  width: 100% !important;
+}
+
+.datepicker-dropdown .datepicker-picker .datepicker-cell.day, .datepicker-dropdown .days .datepicker-cell.day, .datepicker-dropdown .datepicker-grid .datepicker-cell.day {
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  border-radius: 50%;
+}
+
+.datepicker-dropdown .datepicker-picker .datepicker-cell.day:hover, .datepicker-dropdown .days .datepicker-cell.day:hover, .datepicker-dropdown .datepicker-grid .datepicker-cell.day:hover {
+  background: #F2F2F2;
+}
+
+.datepicker-dropdown .datepicker-picker .datepicker-cell.day.selected, .datepicker-dropdown .days .datepicker-cell.day.selected, .datepicker-dropdown .datepicker-grid .datepicker-cell.day.selected {
+  background: #000;
+}
+
+.datepicker-dropdown .datepicker-picker .datepicker-cell.day.disabled, .datepicker-dropdown .days .datepicker-cell.day.disabled, .datepicker-dropdown .datepicker-grid .datepicker-cell.day.disabled {
+  background: transparent;
+}
+
+.counter-booking-form-holder.width_m .starting-form, .counter-booking-form-holder.width_s .starting-form, .counter-booking-form-holder.width_xs .starting-form {
+  flex-wrap: wrap;
+}
+
+.counter-booking-form-holder.width_m .starting-form > *, .counter-booking-form-holder.width_s .starting-form > *, .counter-booking-form-holder.width_xs .starting-form > * {
+  width: 33.333%;
+  padding-right: 10px;
+}
+
+.counter-booking-form-holder.width_m .starting-form > * select, .counter-booking-form-holder.width_s .starting-form > * select, .counter-booking-form-holder.width_xs .starting-form > * select {
+  width: 100%;
+}
+
+.counter-booking-form-holder.width_m .starting-form > *:first-child, .counter-booking-form-holder.width_m .starting-form > *:nth-child(2), .counter-booking-form-holder.width_m .starting-form > *:nth-child(3), .counter-booking-form-holder.width_s .starting-form > *:first-child, .counter-booking-form-holder.width_s .starting-form > *:nth-child(2), .counter-booking-form-holder.width_s .starting-form > *:nth-child(3), .counter-booking-form-holder.width_xs .starting-form > *:first-child, .counter-booking-form-holder.width_xs .starting-form > *:nth-child(2), .counter-booking-form-holder.width_xs .starting-form > *:nth-child(3) {
+  margin-bottom: 15px;
+}
+
+.counter-booking-form-holder.width_m .starting-form > *:nth-child(4), .counter-booking-form-holder.width_s .starting-form > *:nth-child(4), .counter-booking-form-holder.width_xs .starting-form > *:nth-child(4) {
+  border-left: 0 none;
+}
+
+.counter-booking-form-holder.width_m .starting-form > *.button-holder, .counter-booking-form-holder.width_s .starting-form > *.button-holder, .counter-booking-form-holder.width_xs .starting-form > *.button-holder {
+  text-align: right;
+  padding-right: 0;
+  border-left: 0 none;
+}
+
+.counter-booking-form-holder.width_xs .starting-form {
+  padding: 10px 0 0;
+  overflow: hidden;
+  border-radius: 50px;
+}
+
+.counter-booking-form-holder.width_xs .starting-form label {
+  white-space: nowrap;
+}
+
+.counter-booking-form-holder.width_xs .starting-form > * {
+  width: 50%;
+  padding: 15px 35px 30px;
+  border-left: 0 none;
+}
+
+.counter-booking-form-holder.width_xs .starting-form > *:first-child {
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+}
+
+.counter-booking-form-holder.width_xs .starting-form > *:nth-child(2), .counter-booking-form-holder.width_xs .starting-form > *:nth-child(3) {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 15px;
+}
+
+.counter-booking-form-holder.width_xs .starting-form > *:nth-child(3), .counter-booking-form-holder.width_xs .starting-form > *:nth-child(5) {
+  position: relative;
+}
+
+.counter-booking-form-holder.width_xs .starting-form > *:nth-child(3):before, .counter-booking-form-holder.width_xs .starting-form > *:nth-child(5):before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 15px;
+  width: 1px;
+  background: #eee;
+}
+
+.counter-booking-form-holder.width_xs .starting-form > *:last-child {
+  width: 100%;
+  margin-bottom: 0;
+  padding: 0;
+  border: 0 none;
+}
+
+.counter-booking-form-holder.width_xs .starting-form > *:last-child button {
+  width: 100% !important;
+  border-radius: 0 !important;
+  height: 70px !important;
+  color: #fff !important;
+}
+
+.counter-booking-form-holder.width_xs .starting-form > *:last-child button svg {
+  display: none;
+}
+
+.counter-booking-form-holder.width_xs .starting-form > *:last-child button span {
+  display: inline;
+}
